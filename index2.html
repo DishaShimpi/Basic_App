@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">"
+        <link href ="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <title>Basic Application</title>
+    </head>
+    <body style="color: white; background-color: #1d2630;">
+        <div class="container mt-5">
+            <div class="text-center">
+            <h1 class="display-5 mb-5"><strong>Basic Application</strong></strong></h1>
+            </div>
+            <div class="main row justify-content-center">
+                <form action="" id="basic-form" class="main row justify justify-content-center mb-4" autocomplete="off">
+                    <div class="col-7 mb-3">
+                        <label for="name">Full Name</label>
+                        <input class="form-control" id="name" type="text" placeholder="Enter Full Name">
+                    </div>
+                    <div class="col-7 mb-3">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" type="email" placeholder="Enter Email">
+                    </div>
+                    <div class="col-7 mb-3">
+                        <label for="dob">Date of Birth</label>
+                        <input class="form-control" id="dob" type="date" placeholder="Enter Date of Birth">
+                    </div>
+                    <div class="col-7 mb-3">
+                        <label for="gender">Gender</label>
+                       <select class="form-control" id="gender" type="text" required>
+                            <option value="">---</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                       </div>
+                       <div class="col-7 mb-3">
+                        <label for="hobby">Hobby</label>
+                        <input class="form-control" id="hobby" type="text" placeholder="Enter Hobby">
+                    </div>
+                    <div class="col-7 mb-3">
+                        <label for="country">Country</label>
+                        <select class="form-control" id="country" type="text" placeholder="Select Country" onchange="populate(this.id,'state')">
+                            <option value="">---</option>
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                        </select>
+                    </div>
+                   <div class="col-7 mb-3">
+                        <label for="state">State</label>
+                        <select class="form-control" id="state" type="text" placeholder="Select State" onchange="populate(this.id,'city')">
+                            <option value="">---</option>
+                        </select>
+                    </div>
+                    <!--<div class="col-7 col-md-6 mb-3">
+                        <label for="city">City</label>
+                        <select class="form-control" id="city" type="text" placeholder="Select City">
+                            <option value="">---</option>
+                            
+                        </select>
+                    </div>-->
+                    <div class="col-7">
+                        <input class="btn btn-success add-btn" type="submit" value="Submit">
+                    </div>
+                </form>
+                <div class="col-10 mt-5">
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>DoB</th>
+                                <th>Gender</th>
+                                <th>Hobby</th>
+                                <th>Country</th>
+                                <th>State</th>
+                                <!--<th>City</th>-->
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="form-list">
+                            <tr>
+                                <td>Disha</td>
+                                <td>D@gmail.com</td>
+                                <td>1/6/2000</td>
+                                <td>Female</td>
+                                <td>Progamming</td>
+                                <td>India</td>
+                                <td>Gujarat</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm edit">Edit</button>
+                                    <button class="btn btn-danger btn-sm delete">Delete</button>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
